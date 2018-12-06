@@ -1,0 +1,71 @@
+body {
+
+    background: purple;
+    /* background-image: url("https://cdn.pixabay.com/photo/2016/10/17/11/54/mandala-1747463_1280.jpg"); */
+    background-repeat: repeat;
+    font-family:"cursive";
+    font-size: 18px;
+    line-height: 150%;
+}
+
+h1 { 
+    color: blueviolet ;
+    font-family: cursive;
+    background-color:lavender;
+    /* border: 1px color purple; */
+    margin: 0;
+    text-align: center; 
+    padding-top: 10 px;
+    padding-bottom: 10px;
+    font-size: 28px;
+}
+
+h2 {
+    color: blueviolet;
+    margin: 0;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+ .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+ }
+
+p  {
+    background-color: rgb(187, 164, 240); 
+    color: #777;
+    margin: 0;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px; 
+    width: 100%;
+    /* float: right; */
+}
+a { 
+    color: blueviolet
+
+}
+ 
+.container {
+    background-color: #ebebeb;
+    width: 512px;
+    border: 1px solid purple;
+    margin: 0 auto;
+}
+
+section{ 
+    padding: 20px;
+    margin: 0 auto; 
+}
+
+
+
+a {
+    display: block;
+    padding: 8px;
+    background-color: rgb(247, 222, 113);
+}
