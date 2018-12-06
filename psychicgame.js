@@ -5,51 +5,89 @@ $(document).ready(function() {
     var Losses = 0;
     var GuessesLeft = 10;
     var guessesMade = [];
-    
+    var eachofLetters = null;
 
     document.onkeyup = function(event) {
         var game = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
-        var choice = letterChoices[Math.floor(Math.random() * 26)];
-        var answer = gane[choice];
+        var letterChoices = letters[Math.floor(Math.random() * letters.length)];
+        var answer = game[choice];
         // var mylength = <answer class="length"> </answer>
         var userGuess = event.key;
         
+     function countGuessesLeft() {
+         document.querySelector("#letter").innerHTML = "Your Guesses so far: " = letterUser.join(' ');
 
-       if (options.indexOf(userGuess) > -1) {
+     }
 
-           if (userGuess === computerGuess) {
-               WINS++;
-               GuessesLeft = 10;
-               guessesMade = [];
-           }
+     countGuessesLeft();
+     var restart = function() {
+         GuessesLeft = 10
+         letterUser = []
+         var letterChoices = letters[Math.random() * letters.length)];
+     }
 
-           if (userGuess != computerGuess) {
-               GuessesLeft--;
-               guessesMade.push(userGuess);
-           }
+     When the user presses a key, it will run the following function..
+     document.onkey = function(event) {
+         guessesLeft--;
+         var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
-           if (GuessesLeft === 0) {
+         letterUser.push(userGuess);
+         countGuessesLeft();
+         farUserGuesses();
+     }
+     if ((UserGuess === letterChoices && (GuessesLeft > 0)) {
+         {
+        WINS++;
+        document.querySelector("#wins").innerHTML = "Wins: " + wins;
+ restart();
 
-           GuessesLeft = 9;
-           Losses ++;
-           guessesMade = [];
+         else if (userGuess === computerGuess) && (GuessesLeft > 0)) {
+             GuessesLeft = GuessesLeft--;
+              
+	} 
+	else  {
+		losses++;
+        document.querySelector("#losses").innerHTML = "Losses: " + losses;
+        alert("You LOSE! The letter to guess was " + letterToGuess +"!"); 
+       reset();
+	}
+  };		
+
+
+
+Collapse 
+var html = 
+       "<h2>Press ANY letter on the keyboard to see your fate!</h2>" +
+       "<Press ANY letter on the keyboard to see your fate!</p>" +
+       "<p>WINS: " + WINS + "</p>" +
+       "<p>Losses: " + Losses + "</p>" +
+       "<p>Guesses Left: " + Guesses Left + "</p>" +
+       "<p>Guesses Made: " + Guesses Made.join(", ") + "</p>";
+
+//                GuessesLeft = 10;
+//                guessesMade = [];
+//            }
+
+//            if (userGuess != computerGuess) {
+//                GuessesLeft--;
+//                guessesMade.push(userGuess);
+//            }
+
+//            if (GuessesLeft === 0) {
+
+//            GuessesLeft = 9;
+//            Losses ++;
+//            guessesMade = [];
 
            
-       }
-
-       var html = 
-       "<h1>Can YOU guess which letter the computer is thinking</h1>" +
-       "<Press ANY letter on the keyboard to see your fate!</p>" +
-       "<p>WINS: " + wins + "</p>" +
-       "<p>Losses: " + losses + "</p>" +
-       "<p>Guesses Left: " + numGuesses + "</p>" +
-       "<p>Guesses Made: " + guessesMade.join(", ") + "</p>";
-
-       document.querySelector("#game").innerHTML = html;
+//        }
 
        
-       }
-   };
+//        document.querySelector("#game").innerHTML = html;
+
+       
+//        }
+//    };
 
 
 
