@@ -8,25 +8,25 @@ $(document).ready(function() {
     var eachofLetters = null;
 
     document.onkeyup = function(event) {
-        var game = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
+        // var game = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
         var letterChoices = letters[Math.floor(Math.random() * letters.length)];
         var answer = game[choice];
         // var mylength = <answer class="length"> </answer>
         var userGuess = event.key;
         
      function countGuessesLeft() {
-         document.querySelector("#letter").innerHTML = "Your Guesses so far: " = letterUser.join(' ');
+         document.querySelector("#letter").innerHTML = "Guesses Made " = letterUser.join(' ');
 
      }
 
-     countGuessesLeft();
-     var restart = function() {
+     countGuessesLeft(); 
+     var restartgame= function() {
          GuessesLeft = 10
          letterUser = []
-         var letterChoices = letters[Math.random() * letters.length)];
+         var letterChoices = letters[Math.floor(Math.random() * letters.length)];
      }
 
-     When the user presses a key, it will run the following function..
+    //  When the user presses a key, it will run the following function..
      document.onkey = function(event) {
          guessesLeft--;
          var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
@@ -35,23 +35,23 @@ $(document).ready(function() {
          countGuessesLeft();
          farUserGuesses();
      }
-     if ((UserGuess === letterChoices && (GuessesLeft > 0)) {
-         {
+     if (UserGuess === letterChoices && (GuessesLeft > 0)) {
+       
         WINS++;
-        document.querySelector("#wins").innerHTML = "Wins: " + wins;
+        document.querySelector("#wins").innerHTML = "WINS: " + wins;
  restart();
-
-         else if (userGuess === computerGuess) && (GuessesLeft > 0)) {
-             GuessesLeft = GuessesLeft--;
+     }
+     else if (UserGuess === computerGuess && GuessesLeft > 0) {
+             GuessesLeft--;
               
 	} 
 	else  {
 		losses++;
         document.querySelector("#losses").innerHTML = "Losses: " + losses;
         alert("You LOSE! The letter to guess was " + letterToGuess +"!"); 
-       reset();
+       restartgame();
 	}
-  };		
+   };		
 
 
 
@@ -61,8 +61,8 @@ var html =
        "<Press ANY letter on the keyboard to see your fate!</p>" +
        "<p>WINS: " + WINS + "</p>" +
        "<p>Losses: " + Losses + "</p>" +
-       "<p>Guesses Left: " + Guesses Left + "</p>" +
-       "<p>Guesses Made: " + Guesses Made.join(", ") + "</p>";
+       "<p>Guesses Left: " + GuessesLeft + "</p>" +
+       "<p>Guesses Made: " + GuessesMade.join(", ") + "</p>";
 
 //                GuessesLeft = 10;
 //                guessesMade = [];
