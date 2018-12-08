@@ -17,6 +17,7 @@
     // USER GUESS WRONG
       if (guessesMade.indexOf(userGuess) < 0 && letters.indexOf(userGuess)  >= 0) {
          guessesMade [guessesMade.length] = userGuess 
+         document.getElementById(elementname).innerhtml = "Guesses Made: " = guessesMade
          guessesLeft--;
          console.log('GUESSES LEFT: ' + guessesLeft);
      }
