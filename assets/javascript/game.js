@@ -16,8 +16,8 @@
      
     // USER GUESS WRONG
       if (guessesMade.indexOf(userGuess) < 0 && letters.indexOf(userGuess)  >= 0) {
-         guessesMade [guessesMade.length] = userGuess 
-         document.getElementById(elementname).innerhtml = "Guesses Made: " = guessesMade
+         guessesMade[guessesMade.length] = userGuess 
+        //  document.getElementById(guessesMade).innerhtml = "Guesses Made: " + userGuess
          guessesLeft--;
          console.log('GUESSES LEFT: ' + guessesLeft);
      }
@@ -28,7 +28,7 @@
       if (userGuess === letterChoices) {
           alert ("You Win!")
           wins++;
-          document.getElementById("WINS").innerHTML = "Wins" + wins 
+          document.getElementById("wins").innerHTML = "Wins" + wins 
           guessesLeft = 10
           guessesMade = [];
           console.log(wins)
@@ -42,7 +42,7 @@
          guessesLeft = 10
          guessesMade = [];
          console.log(losses)
-         document.getElementById("Losses").innerHTML = "Losses" + losses
+         document.getElementById("losses").innerHTML = "Losses" + losses
          letterChoices = letters[Math.floor(Math.random() * letters.length)];
         
      }
